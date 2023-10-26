@@ -21,7 +21,7 @@ const Login = () => {
           console.log(loggedUser)
        } )
 
-       .then( error => {
+       .catch(error => {
            console.log(error.message)
        } )
 
@@ -38,7 +38,7 @@ const Login = () => {
     </div>
 
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form onClick={handleLogin} className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
